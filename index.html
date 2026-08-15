@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>محمد أحمد طه | Mohammad Ahmed Taha</title>
+
+  <meta name="description" content="الموقع الرسمي لمحمد أحمد طه، مهتم بإدارة الأعمال والمحاسبة، وصاحب براند عطور، ويقيم ويعمل في أبوظبي، الإمارات العربية المتحدة.">
+
+  <meta name="author" content="محمد أحمد طه">
+
+  <!-- بيانات تساعد Google على فهم الصفحة -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "محمد أحمد طه",
+      "alternateName": "Mohammad Ahmed Taha",
+      "birthDate": "2003",
+      "birthPlace": {
+        "@type": "Place",
+        "name": "مخيم نهر البارد، لبنان"
+      },
+      "jobLocation": {
+        "@type": "Place",
+        "name": "أبوظبي، الإمارات العربية المتحدة"
+      },
+      "sameAs": [
+        "https://www.instagram.com/mohmmadtaha_313/",
+        "https://www.tiktok.com/@m_a_t-313"
+      ]
+    }
+  }
+  </script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Tahoma, sans-serif;
+      background: #0b0b0b;
+      color: #ffffff;
+      line-height: 1.8;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1050px;
+      margin: auto;
+    }
+
+    header {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
+      background:
+        radial-gradient(circle at top, #3b2a12 0%, #0b0b0b 55%);
+    }
+
+    .hero {
+      max-width: 800px;
+    }
+
+    .badge {
+      display: inline-block;
+      border: 1px solid #c9a227;
+      color: #d9b63f;
+      padding: 6px 18px;
+      border-radius: 30px;
+      margin-bottom: 25px;
+      font-size: 14px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 8vw, 78px);
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+
+    .english-name {
+      color: #d9b63f;
+      font-size: clamp(20px, 4vw, 30px);
+      margin-bottom: 25px;
+    }
+
+    .hero p {
+      color: #cccccc;
+      font-size: 19px;
+      max-width: 650px;
+      margin: auto;
+    }
+
+    .buttons {
+      margin-top: 35px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 12px 25px;
+      border-radius: 30px;
+      border: 1px solid #c9a227;
+      transition: 0.3s;
+    }
+
+    .btn.gold {
+      background: #c9a227;
+      color: #111;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      opacity: 0.85;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(10,10,10,0.95);
+      border-bottom: 1px solid #292929;
+      padding: 13px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #ddd;
+      margin: 0 12px;
+      font-size: 15px;
+    }
+
+    nav a:hover {
+      color: #d9b63f;
+    }
+
+    section {
+      padding: 80px 0;
+    }
+
+    section h2 {
+      color: #d9b63f;
+      font-size: 32px;
+      margin-bottom: 25px;
+    }
+
+    .about {
+      color: #d2d2d2;
+      font-size: 18px;
+      max-width: 850px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: #151515;
+      border: 1px solid #292929;
+      border-radius: 18px;
+      padding: 25px;
+    }
+
+    .card h3 {
+      color: #d9b63f;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      color: #bbb;
+    }
+
+    .brand {
+      background: linear-gradient(135deg, #19150c, #111);
+      border: 1px solid #6f5a22;
+      border-radius: 22px;
+      padding: 35px;
+      margin-top: 25px;
+    }
+
+    .brand h3 {
+      font-size: 28px;
+      color: #d9b63f;
+      margin-bottom: 10px;
+    }
+
+    .socials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 25px;
+    }
+
+    .social {
+      background: #171717;
+      border: 1px solid #333;
+      padding: 14px 22px;
+      border-radius: 30px;
+    }
+
+    .social:hover {
+      border-color: #d9b63f;
+      color: #d9b63f;
+    }
+
+    footer {
+      text-align: center;
+      border-top: 1px solid #292929;
+      padding: 30px 15px;
+      color: #777;
+    }
+
+    .gold-text {
+      color: #d9b63f;
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        margin: 0 5px;
+        font-size: 13px;
+      }
+
+      section {
+        padding: 55px 0;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a href="#about">من أنا</a>
+    <a href="#education">الدراسة</a>
+    <a href="#business">أعمالي</a>
+    <a href="#social">حساباتي</a>
+  </nav>
+
+  <header>
+    <div class="hero">
+
+      <div class="badge">الموقع الرسمي</div>
+
+      <h1>محمد أحمد طه</h1>
+
+      <div class="english-name">
+        Mohammad Ahmed Taha
+      </div>
+
+      <p>
+        مهتم بإدارة الأعمال والمحاسبة، وصاحب براند عطور،
+        أعيش وأعمل في أبوظبي، الإمارات العربية المتحدة.
+      </p>
+
+      <div class="buttons">
+        <a class="btn gold" href="#about">تعرف عليّ</a>
+        <a class="btn" href="#social">حساباتي الرسمية</a>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+
+    <section id="about">
+      <div class="container">
+
+        <h2>من أنا</h2>
+
+        <p class="about">
+          أنا محمد أحمد طه، من مواليد عام 2003 في مخيم نهر البارد
+          في لبنان. درست إدارة الأعمال والمحاسبة، كما حصلت على
+          شهادة في مجال التمديدات الكهربائية من مركز سبلين.
+        </p>
+
+        <br>
+
+        <p class="about">
+          في عام 2022 انتقلت إلى دولة الإمارات العربية المتحدة
+          للعمل، وأقيم وأعمل حالياً في أبوظبي. إلى جانب عملي،
+          أهتم ببناء مشاريعي الخاصة وتطوير نفسي في مجال الأعمال،
+          ومن بينها مشروعي في مجال العطور.
+        </p>
+
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="container">
+
+        <h2>الدراسة والشهادات</h2>
+
+        <div class="cards">
+
+          <div class="card">
+            <h3>إدارة الأعمال</h3>
+            <p>
+              دراسة في مجال إدارة الأعمال وتطوير المهارات الإدارية.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>المحاسبة</h3>
+            <p>
+              دراسة في مجال المحاسبة والمهارات المالية.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>التمديدات الكهربائية</h3>
+            <p>
+              حاصل على شهادة في مجال التمديدات الكهربائية من مركز سبلين.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section id="business">
+      <div class="container">
+
+        <h2>أعمالي ومشاريعي</h2>
+
+        <div class="brand">
+
+          <h3>براند العطور</h3>
+
+          <p>
+            أحد مشاريعي الخاصة هو العمل في مجال العطور،
+            وأسعى من خلاله إلى بناء علامة تجارية مميزة
+            وتطويرها بشكل مستمر.
+          </p>
+
+          <br>
+
+          <a
+            class="btn gold"
+            href="https://mohds-app-hf8t.glide.page/dl/a400f7?utm_source=ig&utm_medium=social&utm_content=link_in_bio"
+            target="_blank"
+            rel="noopener noreferrer">
+            زيارة براند العطور
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section id="social">
+      <div class="container">
+
+        <h2>حساباتي الرسمية</h2>
+
+        <p class="about">
+          يمكنكم متابعتي عبر حساباتي الرسمية:
+        </p>
+
+        <div class="socials">
+
+          <a
+            class="social"
+            href="https://www.instagram.com/mohmmadtaha_313/"
+            target="_blank"
+            rel="noopener noreferrer">
+            Instagram — @mohmmadtaha_313
+          </a>
+
+          <a
+            class="social"
+            href="https://www.tiktok.com/@m_a_t-313"
+            target="_blank"
+            rel="noopener noreferrer">
+            TikTok — @m_a_t-313
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2026 محمد أحمد طه — Mohammad Ahmed Taha
+  </footer>
+
+</body>
+</html>
