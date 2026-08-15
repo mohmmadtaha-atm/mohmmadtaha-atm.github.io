@@ -80,6 +80,21 @@
       max-width: 800px;
     }
 
+    .profile-img-container {
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .profile-img {
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #c9a227;
+      box-shadow: 0 0 20px rgba(201, 162, 39, 0.3);
+    }
+
     .badge {
       display: inline-block;
       border: 1px solid #c9a227;
@@ -267,6 +282,11 @@
   <header>
     <div class="hero">
 
+      <!-- قسم الصورة الشخصية -->
+      <div class="profile-img-container">
+        <img src="profile.jpg.jpeg" alt="محمد أحمد طه" class="profile-img">
+      </div>
+
       <div class="badge">الموقع الرسمي</div>
 
       <h1>محمد أحمد طه</h1>
@@ -393,10 +413,6 @@
             target="_blank"
             rel="noopener noreferrer">
             Instagram — @mohmmadtaha_313
-          </a>
-
-        
-          
           </a>
 
         </div>
