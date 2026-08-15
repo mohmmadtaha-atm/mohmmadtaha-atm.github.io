@@ -6,7 +6,7 @@
 
   <title>محمد أحمد طه | Mohammad Ahmed Taha</title>
 
-  <meta name="description" content="الموقع الرسمي لمحمد أحمد طه، مهتم بإدارة الأعمال والمحاسبة المعلوماتية، يعمل في شركة لتصنيع الآلات المتطورة، وصاحب براند عطور ومقدم خدمات تجارية ورقمية.">
+  <meta name="description" content="الموقع الرسمي لمحمد أحمد طه، مهتم بإدارة الأعمال والمحاسبة المعلوماتية، يعمل في شركة لتصنيع الآلات المتطورة، وصاحب براند عطور ومقدم خدمات تجارية ورقمية وترجمة.">
 
   <meta name="author" content="محمد أحمد طه">
 
@@ -52,6 +52,7 @@
       background: #0b0b0b;
       color: #ffffff;
       line-height: 1.8;
+      top: 0 !important; /* لإخفاء شريط جوجل العلوي الأصلي */
     }
 
     a {
@@ -63,6 +64,46 @@
       width: 90%;
       max-width: 1050px;
       margin: auto;
+    }
+
+    /* شريط لغة الموقع بالأعلى */
+    .top-bar {
+      background: #111111;
+      padding: 10px 25px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      border-bottom: 1px solid #222;
+    }
+
+    .lang-switch {
+      display: flex;
+      gap: 10px;
+    }
+
+    .lang-btn {
+      background: #1f1f1f;
+      color: #d9b63f;
+      border: 1px solid #c9a227;
+      padding: 5px 14px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 13px;
+      transition: 0.3s;
+    }
+
+    .lang-btn:hover {
+      background: #c9a227;
+      color: #111;
+    }
+
+    /* إخفاء عنصر الترجمة التلقائي */
+    #google_translate_element {
+      display: none;
+    }
+    .goog-te-banner-frame {
+      display: none !important;
     }
 
     header {
@@ -269,6 +310,16 @@
 
 <body>
 
+  <!-- شريط اختيار اللغة أعلى الصفحة -->
+  <div class="top-bar">
+    <div class="lang-switch">
+      <button class="lang-btn" onclick="changeLanguage('ar')">العربية</button>
+      <button class="lang-btn" onclick="changeLanguage('en')">English</button>
+    </div>
+  </div>
+
+  <div id="google_translate_element"></div>
+
   <nav>
     <a href="#about">من أنا</a>
     <a href="#education">الدراسة</a>
@@ -293,7 +344,7 @@
       </div>
 
       <p>
-        صاحب براند عطور، ومُقدّم خدمات أعمال وتجارة تشمل: فتح الحسابات البنكية، حجوزات الطيران والفنادق عالمياً، إضافة الأنشطة على جوجل ماب، وتصميم المواقع الإلكترونية، أعيش وأعمل في أبوظبي.
+        صاحب براند عطور، ومُقدّم خدمات أعمال وتجارة تشمل: فتح الحسابات البنكية، حجوزات الطيران والفنادق عالمياً، خدمات الترجمة، إضافة الأنشطة على جوجل ماب، وتصميم المواقع الإلكترونية.
       </p>
 
       <div class="buttons">
@@ -314,7 +365,7 @@
         </p>
         <br>
         <p class="about">
-          في عام 2022 انتقلت إلى دولة الإمارات العربية المتحدة للعمل، وأقيم وأعمل حالياً في العاصمة أبوظبي في شركة متخصص التمديدات وتصنيع الآلات المتطورة. إلى جانب عملي، أطور براند العطور الخاص بي، وأقدم مجموعة واسعة من الخدمات التجارية والحلول الرقمية تشمل فتح الحسابات البنكية للأفراد والشركات، وحجوزات السفر والفنادق حول العالم، وتصميم المواقع الإلكترونية وإنشاء الملفات التجارية على خرائط جوجل.
+          في عام 2022 انتقلت إلى دولة الإمارات العربية المتحدة للعمل، وأقيم وأعمل حالياً في العاصمة أبوظبي في شركة لتصنيع الآلات المتطورة. إلى جانب عملي، أطور براند العطور الخاص بي، وأقدم مجموعة واسعة من الخدمات التجارية والحلول الرقمية والترجمة.
         </p>
       </div>
     </section>
@@ -346,6 +397,10 @@
           <div class="card">
             <h3>🏦 فتح حسابات بنكية</h3>
             <p>تسهيل فتح الحسابات البنكية المصرفية للأفراد والشركات وتوفير المستندات والإجراءات اللازمة بكل سهولة.</p>
+          </div>
+          <div class="card">
+            <h3>📝 خدمات الترجمة</h3>
+            <p>تقديم خدمات ترجمة النصوص والمستندات والملفات بدقة واحترافية عالية بين مختلف اللغات.</p>
           </div>
           <div class="card">
             <h3>📍 خرائط جوجل (Google Maps)</h3>
@@ -398,6 +453,26 @@
   <footer>
     © 2026 محمد أحمد طه — Mohammad Ahmed Taha
   </footer>
+
+  <!-- سكربت التحكم بالترجمة -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'ar',
+        includedLanguages: 'ar,en',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+
+    function changeLanguage(langCode) {
+      var select = document.querySelector('.goog-te-combo');
+      if (select) {
+        select.value = langCode;
+        select.dispatchEvent(new Event('change'));
+      }
+    }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 </html>
